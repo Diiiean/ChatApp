@@ -13,6 +13,7 @@
 		04316FC72870A5860072DD0D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04316FC62870A5860072DD0D /* ProfileViewController.swift */; };
 		04316FC92870A59C0072DD0D /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04316FC82870A59C0072DD0D /* VideoPlayerViewController.swift */; };
 		04316FCB2870A5AE0072DD0D /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04316FCA2870A5AE0072DD0D /* NewChatViewController.swift */; };
+		04316FCE2870E5080072DD0D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04316FCD2870E5080072DD0D /* Extensions.swift */; };
 		04E519AC286CF0FD00EB0BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E519AB286CF0FD00EB0BC9 /* AppDelegate.swift */; };
 		04E519AE286CF0FD00EB0BC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E519AD286CF0FD00EB0BC9 /* SceneDelegate.swift */; };
 		04E519B0286CF0FE00EB0BC9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E519AF286CF0FD00EB0BC9 /* ChatViewController.swift */; };
@@ -28,6 +29,7 @@
 		04316FC62870A5860072DD0D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		04316FC82870A59C0072DD0D /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		04316FCA2870A5AE0072DD0D /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		04316FCD2870E5080072DD0D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04E519A8286CF0FD00EB0BC9 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E519AB286CF0FD00EB0BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E519AD286CF0FD00EB0BC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +56,7 @@
 			children = (
 				04E519AF286CF0FD00EB0BC9 /* ChatViewController.swift */,
 				04316FC02870A5060072DD0D /* PhotoViewController.swift */,
-				04316FC22870A5220072DD0D /* LoginViewController.swift */,
-				04316FC42870A5370072DD0D /* RegisterViewController.swift */,
+				04316FCC2870A7540072DD0D /* Login */,
 				04316FC62870A5860072DD0D /* ProfileViewController.swift */,
 				04316FC82870A59C0072DD0D /* VideoPlayerViewController.swift */,
 				04316FCA2870A5AE0072DD0D /* NewChatViewController.swift */,
@@ -91,6 +92,7 @@
 			children = (
 				04E519AB286CF0FD00EB0BC9 /* AppDelegate.swift */,
 				04E519AD286CF0FD00EB0BC9 /* SceneDelegate.swift */,
+				04316FCD2870E5080072DD0D /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -102,6 +104,15 @@
 				04E519B6286CF0FF00EB0BC9 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04316FCC2870A7540072DD0D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04316FC22870A5220072DD0D /* LoginViewController.swift */,
+				04316FC42870A5370072DD0D /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		04E5199F286CF0FD00EB0BC9 = {
@@ -209,6 +220,7 @@
 				04316FC12870A5060072DD0D /* PhotoViewController.swift in Sources */,
 				04E519AC286CF0FD00EB0BC9 /* AppDelegate.swift in Sources */,
 				04316FC52870A5370072DD0D /* RegisterViewController.swift in Sources */,
+				04316FCE2870E5080072DD0D /* Extensions.swift in Sources */,
 				04316FC72870A5860072DD0D /* ProfileViewController.swift in Sources */,
 				04316FC92870A59C0072DD0D /* VideoPlayerViewController.swift in Sources */,
 				04316FC32870A5220072DD0D /* LoginViewController.swift in Sources */,
@@ -368,11 +380,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuansengsy.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -397,11 +411,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nuansengsy.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
