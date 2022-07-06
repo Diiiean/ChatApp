@@ -15,6 +15,7 @@
 		04316FCB2870A5AE0072DD0D /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04316FCA2870A5AE0072DD0D /* NewChatViewController.swift */; };
 		04316FCE2870E5080072DD0D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04316FCD2870E5080072DD0D /* Extensions.swift */; };
 		04316FD02872CB250072DD0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04316FCF2872CB250072DD0D /* GoogleService-Info.plist */; };
+		04316FD2287414270072DD0D /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04316FD1287414270072DD0D /* DatabaseManager.swift */; };
 		04E519AC286CF0FD00EB0BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E519AB286CF0FD00EB0BC9 /* AppDelegate.swift */; };
 		04E519AE286CF0FD00EB0BC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E519AD286CF0FD00EB0BC9 /* SceneDelegate.swift */; };
 		04E519B0286CF0FE00EB0BC9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E519AF286CF0FD00EB0BC9 /* ChatViewController.swift */; };
@@ -33,6 +34,7 @@
 		04316FCA2870A5AE0072DD0D /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		04316FCD2870E5080072DD0D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04316FCF2872CB250072DD0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04316FD1287414270072DD0D /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		04E519A8286CF0FD00EB0BC9 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E519AB286CF0FD00EB0BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E519AD286CF0FD00EB0BC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				04E519AB286CF0FD00EB0BC9 /* AppDelegate.swift */,
 				04E519AD286CF0FD00EB0BC9 /* SceneDelegate.swift */,
 				04316FCD2870E5080072DD0D /* Extensions.swift */,
+				04316FD1287414270072DD0D /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E519B0286CF0FE00EB0BC9 /* ChatViewController.swift in Sources */,
+				04316FD2287414270072DD0D /* DatabaseManager.swift in Sources */,
 				04316FCB2870A5AE0072DD0D /* NewChatViewController.swift in Sources */,
 				04316FC12870A5060072DD0D /* PhotoViewController.swift in Sources */,
 				04E519AC286CF0FD00EB0BC9 /* AppDelegate.swift in Sources */,

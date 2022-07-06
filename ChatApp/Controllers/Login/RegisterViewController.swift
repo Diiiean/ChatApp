@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     }()
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(systemName: "person.circle")
         imageView.tintColor = .gray
         imageView.layer.borderColor = UIColor.systemMint.cgColor
         imageView.layer.borderWidth = 2
@@ -168,18 +168,35 @@ class RegisterViewController: UIViewController {
         }
         
         // Firebase log in
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
-            guard let result = authResult, error == nil else {
-                print("Error creating a user")
+        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
+            guard let strongSelf = self else {
                 return
             }
-            let user = result.user
-            print("Created User: \(user)")
+            guard !exists else {
+                // user alredy exists
+                strongSelf.alertLoginUserError(message: "User already exists")
+                return
+            }
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+                guard let strongSelf = self else {
+                    return
+                }
+                guard authResult != nil, error == nil else {
+                    print("Error creating a user")
+                    return
+                }
+                //insert user to database
+                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })
+        
+            
         })
     }
+       
     
-    func alertLoginUserError() {
-        let alert = UIAlertController(title: "Wrong login!", message: "Please enter all information to create a new account", preferredStyle: .actionSheet)
+    func alertLoginUserError(message: String = "Please enter all information to create a new account") {
+        let alert = UIAlertController(title: "Wrong login!", message: message, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
